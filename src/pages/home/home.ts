@@ -27,7 +27,20 @@ export class HomePage {
 
     if (!this.platform.is('cordova')) {
       // this._historyProvider.addHistory('https://www.google.com.mx');
-      this._historyProvider.addHistory('geo:19.055737,-98.12501329999998');
+      // this._historyProvider.addHistory('geo:19.055737,-98.12501329999998');
+//       this._historyProvider.addHistory( `BEGIN:VCARD
+// VERSION:2.1
+// N:Kent;Clark
+// FN:Clark Kent
+// ORG:
+// TEL;HOME;VOICE:12345
+// TEL;TYPE=cell:67890
+// ADR;TYPE=work:;;;
+// EMAIL:clark@superman.com
+// END:VCARD`
+//       );
+
+      this._historyProvider.addHistory('MATMSG:TO:bider_@hotmail.com;SUB:Prueba;BODY:Probando la app de Scanner QR;;');
       return;
     }
 

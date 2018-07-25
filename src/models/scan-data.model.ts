@@ -8,5 +8,7 @@ export class ScanData {
 
     if (text.startsWith('http')) { this.type = 'URL'; }
     else if ( text.startsWith('geo') ) { this.type = 'Mapa'; }
+    else if ( text.startsWith('BEGIN:VCARD') ) { this.type = 'Contacto'; }
+    else if ( text.startsWith('MATMSG') ) { this.type = 'Email'; }
   }
 }

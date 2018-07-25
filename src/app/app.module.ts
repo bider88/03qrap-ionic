@@ -12,13 +12,16 @@ import { AgmCoreModule } from '@agm/core';
 // Plugins
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { Contacts } from '@ionic-native/contacts';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { MyApp } from './app.component';
 import {
   HomePage,
   HistoryPage,
   MapPage,
-  TabsPage
+  TabsPage,
+  AboutPage
 } from '../pages/index.pages'
 
 import { HistoryProvider } from '../providers/history/history';
@@ -29,7 +32,8 @@ import { HistoryProvider } from '../providers/history/history';
     HomePage,
     HistoryPage,
     MapPage,
-    TabsPage
+    TabsPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,8 @@ import { HistoryProvider } from '../providers/history/history';
     HomePage,
     HistoryPage,
     MapPage,
-    TabsPage
+    TabsPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
@@ -50,7 +55,9 @@ import { HistoryProvider } from '../providers/history/history';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HistoryProvider,
     BarcodeScanner,
-    InAppBrowser
+    InAppBrowser,
+    Contacts,
+    EmailComposer
   ]
 })
 export class AppModule {}
